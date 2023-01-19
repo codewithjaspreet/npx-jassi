@@ -47,29 +47,29 @@ const questions = [
                 },
             },
             //// Download Resume
-            {
-                name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
-                value: () => {
-                    // cliSpinners.dots;
-                    const loader = ora({
-                        text: " Downloading Resume",
-                        spinner: cliSpinners.material,
-                    }).start();
-                    let pipe = request(`${resume_url}`).pipe(
-                        fs.createWriteStream(`./${npx_card_handle}-resume.html`)
-                    );
-                    pipe.on("finish", function () {
-                        let downloadPath = path.join(
-                            process.cwd(),
-                            `${npx_card_handle}-resume.html`
-                        );
-                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
-                        open(downloadPath);
-                        loader.stop();
-                    });
-                },
-            },
-            //// Quit
+            // {
+            //     name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
+            //     value: () => {
+            //         // cliSpinners.dots;
+            //         const loader = ora({
+            //             text: " Downloading Resume",
+            //             spinner: cliSpinners.material,
+            //         }).start();
+            //         let pipe = request(`${resume_url}`).pipe(
+            //             fs.createWriteStream(`./${npx_card_handle}-resume.html`)
+            //         );
+            //         pipe.on("finish", function () {
+            //             let downloadPath = path.join(
+            //                 process.cwd(),
+            //                 `${npx_card_handle}-resume.html`
+            //             );
+            //             console.log(`\nResume Downloaded at ${downloadPath} \n`);
+            //             open(downloadPath);
+            //             loader.stop();
+            //         });
+            //     },
+            // },
+            // //// Quit
             {
                 name: "Just quit.",
                 value: () => {
@@ -86,7 +86,10 @@ const data = {
     work: `${chalk.white(`${job_title}`)}`,
     twitter: chalk.gray("https://twitter.com/") + chalk.cyan(`${twitter_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue(`${linkedin_username}`),
+    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue(`${linkedin_username}`),  
+    leetcode : chalk.gray("https://leetcode.com/") + chalk.blue(`${leetcode_username}`),
+    instagram: chalk.gray("https://instagram.com/") + chalk.magenta(`${instagram_username}`),
+    portfolio : chalk.gray("https://") + chalk.magenta(`${portfolio_username}`),
     web: chalk.cyan(`${personal_site}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
 
