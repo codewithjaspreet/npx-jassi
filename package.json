@@ -19,6 +19,7 @@
         "clear": "^0.1.0",
         "cli-spinners": "^2.5.0",
         "inquirer": "^7.3.3",
+        "jassie": "^1.0.0",
         "open": "^7.3.1",
         "ora": "^5.3.0",
         "request": "^2.88.2"
