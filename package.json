@@ -1,13 +1,13 @@
 {
-    "name": "rahikhan",
-    "version": "2.2.2",
-    "author": "Rahi Khan <rahikhan360@gmail.com> (https://rahikhan.gtsb.io)",
-    "description": "A personal card for Rahi Khan",
+    "name": "Jaspreet Singh Sodhi",
+    "version": "1.0.0",
+    "author": "Jaspreet Singh Sodhi <jaspreetsodhi02@gmail.com> (https://rahikhan.gtsb.io)",
+    "description": "Hi there ! , How can i help you ?",
     "main": "card.js",
     "bin": "./card.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/rahi-khan/npx_card.git"
+        "url": "https://github.com/codewithjaspreet/npx-jassi"
     },
     "scripts": {
         "setup": "ncu -u && npm i",
