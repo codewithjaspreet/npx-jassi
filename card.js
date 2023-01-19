@@ -8,10 +8,10 @@ const inquirer = require("inquirer");
 const clear = require("clear");
 const open = require("open");
 const fs = require("fs");
-const request = require("request");
+// const request = require("request");
 const path = require("path");
-const ora = require("ora");
-const cliSpinners = require("cli-spinners");
+// const ora = require("ora");
+// const cliSpinners = require("cli-spinners");
 
 clear();
 
@@ -27,7 +27,10 @@ const {
     personal_site,
     npx_card_handle,
     job_title,
-    resume_url,
+    leetcode_username,
+    instagram_username,
+    portfolio_username,
+    
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -73,7 +76,7 @@ const questions = [
             {
                 name: "Just quit.",
                 value: () => {
-                    console.log("Hasta la vista.\n");
+                    console.log("Good bye :)\n");
                 },
             },
         ],
@@ -97,6 +100,9 @@ const data = {
     labelTwitter: chalk.white.bold("    Twitter:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
+    labelleetcode: chalk.white.bold("   leetcode:"),
+    labelinstagram: chalk.white.bold("   instagram:"),
+    labelportfolio: chalk.white.bold("   portfolio:"),
     labelWeb: chalk.white.bold("        Web:"),
     labelCard: chalk.white.bold("       Card:"),
 };
