@@ -1,6 +1,6 @@
 {
     "name": "jassie",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Jaspreet Singh Sodhi <jaspreetsodhi02@gmail.com>",
     "description": "Hi there ! , How can i help you ?",
     "main": "card.js",
