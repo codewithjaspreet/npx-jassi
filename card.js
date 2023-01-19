@@ -24,7 +24,6 @@ const {
     twitter_username,
     linkedin_username,
     github_username,
-    personal_site,
     npx_card_handle,
     job_title,
     leetcode_username,
@@ -93,9 +92,8 @@ const data = {
     leetcode : chalk.gray("https://leetcode.com/") + chalk.blue(`${leetcode_username}`),
     instagram: chalk.gray("https://instagram.com/") + chalk.magenta(`${instagram_username}`),
     portfolio : chalk.gray("https://") + chalk.magenta(`${portfolio_username}`),
-    web: chalk.cyan(`${personal_site}`),
+    web: chalk.cyan(`${portfolio_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
-
     labelWork: chalk.white.bold("       Work:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
@@ -120,6 +118,16 @@ const me = boxen(
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
+       `${data.labelleetcode}  ${data.leetcode}`,
+        ``,
+
+       `${data.labelinstagram}  ${data.instagram}`,
+        ``,
+
+        
+       `${data.labelportfolio}  ${data.portfolio}`,
+        ``,
+
         `${chalk.italic("I am currently looking for new opportunities,")}`,
         `${chalk.italic("my inbox is always open. Whether you have a")}`,
         `${chalk.italic("question or just want to say hi, I will try ")}`,
